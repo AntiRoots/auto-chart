@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.luba }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -22,3 +22,4 @@ jobs:
         with:
           commit_message: "Update chart"
           file_pattern: "docs/chart.png"
+          token: ${{ secrets.luba }}
